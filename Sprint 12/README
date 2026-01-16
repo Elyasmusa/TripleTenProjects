@@ -1,0 +1,127 @@
+Sprint 12: Neural Networks and Deep Learning
+
+Project Requirements
+Part 1: Data Loading and Exploration
+Download and load the dataset. Examine the data to understand:
+
+How many records are in the dataset
+What the features look like
+The distribution of the target variable (charges)
+Are there any missing values
+What the data types are for each column
+Part 2: Data Preprocessing
+Prepare your data for neural network training:
+
+Handle Categorical Variables:
+You have categorical features (sex, smoker, region) that need to be converted to numbers. You can use one-hot encoding or label encoding.
+
+Normalize Numerical Features:
+Scale your numerical features (age, bmi, children) to similar ranges. Remember from the lessons that neural networks work best with normalized inputs.
+
+Split Your Data:
+Divide your data into training and testing sets. A typical split is 80% for training and 20% for testing. Make sure to split BEFORE you normalize to avoid data leakage.
+
+Normalize the Target Variable (Optional but Recommended):
+Consider normalizing the charges variable as well since insurance costs can range widely. This will make training more stable.
+
+Part 3: Build Your Neural Network
+Design and build a neural network architecture using Keras:
+
+Model Architecture:
+You are free to choose:
+
+The number of hidden layers
+The number of neurons per layer
+The activation functions to use
+Whether to include dropout or other regularization
+Start simple and iterate. Remember the lessons on underfitting and overfitting.
+
+Compile Your Model:
+Choose appropriate:
+
+Optimizer (Adam is a good default)
+Loss function (what's appropriate for regression?)
+Metrics to track (MAE or MSE are good choices)
+Part 4: Train Your Model
+Train your neural network:
+
+Set Training Parameters:
+
+Choose a reasonable number of epochs
+Select an appropriate batch size
+Consider using validation data during training
+Monitor Training:
+Keep track of both training and validation loss to detect underfitting or overfitting.
+
+Experiment and Iterate:
+If your first model doesn't work well, try adjusting:
+
+The number of neurons or layers
+The learning rate
+The number of epochs
+Adding or removing regularization
+Part 5: Evaluate Your Model
+Assess your model's performance:
+
+Quantitative Evaluation:
+Calculate performance metrics on your test set:
+
+What is the test loss?
+What is the mean absolute error?
+How do these compare to your training metrics?
+Qualitative Evaluation:
+
+Make predictions on a few test examples
+How far off are the predictions from actual values?
+Do the predictions make sense?
+Diagnose Issues:
+
+Is your model underfitting (high training and test loss)?
+Is your model overfitting (low training loss, high test loss)?
+Is your model well-balanced?
+Part 6: Visualization and Analysis
+Create visualizations to understand your model:
+
+Training History:
+Plot training and validation loss over epochs. What does this tell you about your model?
+
+Predictions vs Actual:
+Create a scatter plot comparing predicted charges to actual charges. How close are they to the diagonal line?
+
+Model Architecture:
+Display your model summary. How many total parameters does your model have?
+
+Part 7: Write a Summary
+Document your findings in a clear summary:
+
+Process:
+
+Briefly describe your data preprocessing steps
+Explain your model architecture choices
+Describe any experimentation you did (different architectures, hyperparameters)
+Results:
+
+Report your final test set performance
+Is your model underfitting, overfitting, or well-balanced?
+What was your best model configuration?
+Insights:
+
+What features seem most important for predicting insurance costs?
+What would you do differently if you had more time?
+What improvements could be made to the model?
+Deliverables
+Submit the following:
+
+Jupyter Notebook or Python Script containing:
+All data loading and preprocessing code
+Model building and training code
+Evaluation and visualization code
+Comments explaining your decisions
+Summary Document (can be in the notebook or separate):
+Description of your approach
+Results and findings
+Reflection on the process
+Visualizations:
+Training/validation loss curves
+Predictions vs actual scatter plot
+Any other relevant visualizations
